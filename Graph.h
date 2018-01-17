@@ -27,6 +27,7 @@ class Graph {
 		char getType(int n);
 		void setType(int n, char t);
 		vector<int> getLikeNeighbors(int n);
+		vector<int> openNodes();
 	private:
 		vector<vector<int>> adj;
 		vector<Edge> edges;

@@ -176,6 +176,16 @@ vector<int> Graph::getLikeNeighbors(int n) {
 	return end;
 }
 
+vector<int> Graph::openNodes() {
+	vector<int> open;
+	for(int i=0; i<static_cast<int>(types.size()); i++) {
+		if(getType(types[i]) == 'O') {
+			open.push_back(i);
+		}
+	}
+	return open;
+}
+
 //overload << operator
 ostream& operator<<(ostream& out, const vector<int>& v) {
 	int len = static_cast<int>(v.size());
